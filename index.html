@@ -159,8 +159,8 @@
 
                 const input0_split = input[0].split('/');
 
-                if (input0_split[0].toLowerCase() !== "ur:jade-pin") {
-                    throw new Error("bcur has to start with ur:jade-pin");
+                if (!input0_split[0].toLowerCase().startsWith("ur:")) {
+                    throw new Error("bcur has to start with ur:");
                 }
 
                 var ur;
